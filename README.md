@@ -1,3 +1,4 @@
+Warning: file corruption, will have to fix.
 # 🌸 Tutor Tama
 
 Your cozy little study buddy that floats on your screen, cheers you on, and grows with you.
