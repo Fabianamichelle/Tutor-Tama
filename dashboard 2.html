@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tama Dashboard</title>
+    <link rel="icon" type="image/png" href="Images/tama buddy.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Swanky+and+Moo+Moo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <! -- Dashboard content goes here ->
+    <div class="bigcontainer-dashboard">
+
+    <h1 class="header-dashboard">Tama Dashboard</h1>
+    <p class="subtitle-dashboard">This is where your Tama will accompany you during your study sessions!</p>
+
+    <! -- Display choosen sprite ->
+    <div class="dashboard-container">
+        <div class="sprite-xp-box">
+            <div class="sprite-container">
+                <img src="" alt="Your Tama" class="sprite">
+             <! xp bar ->
+            <div class="xp-bar">
+            <div class="xp-fill">
+                <div class="xp-fill" style="width: 50%;"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="summarizer-box">
+            <h2>Summarizer</h2>
+            <textarea placeholder="Enter text to summarize..."></textarea>
+            <button>Summarize</button>
+        </div>
+        <div class="output-box">
+            <h2>Output</h2>
+            <div class="output-content">
+                <!-- Summarized text will appear here -->
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const spritePath = localStorage.getItem('chosenSprite');
+    const targetImg = document.querySelector('.sprite-xp-box img');
+    if (!targetImg) return; // safety
+
+    if (spritePath) {
+        targetImg.src = spritePath;
+        targetImg.alt = 'Your Tama';
+        targetImg.classList.add('sprite'); // optional: apply same sizing/style
+        // optional: trigger pop class for animation
+        targetImg.classList.add('pop-in');
+    } else {
+        // optional fallback if no sprite selected
+        targetImg.src = 'Images/default-tama.png';
+        targetImg.alt = 'Default Tama';
+    }
+    });
+    </script>
+
+</body>
+</html>

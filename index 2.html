@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor Tama🌸</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="tama buddy.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Swanky+and+Moo+Moo&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="headercontainer">
+        <h1 class="header">Tutor Tama🌸</h1>
+    </div>
+    <div class="bigcontainer">
+       <h2 class="subtitle">Welcome to the Cutest Study Sesh you'll ever have! Pick a cutie below!  </h2>
+
+
+    <div class="leftcontainer">
+        <img src="Images/babychickey.png" alt="Baby Chickey" id="sprite1" onclick="chooseSprite('Images/babychickey.png')">
+        <h3 id="name1">Baby Chickey</h3>
+        <p id="description1">A cute little chick that loves</p>
+        <p id="description2">to help you study!</p>
+    </div>
+
+    <div class="middlecontainer">
+        <img src="Images/babyturtle.webp" alt="Baby Turtle" id="sprite2" onclick="chooseSprite('Images/babyturtle.webp')">
+        <h3 id="name2">Baby Turtle</h3>
+        <p id="description3">A sweet little turtle that</p>
+        <p id="description4">cheers you on while you learn!</p>
+    </div>
+
+    <div class="rightcontainer">
+        <img src="Images/babysquirrely.png" alt="Baby Squirrel" id="sprite3" onclick="chooseSprite('Images/babysquirrely.png')">
+        <h3 id="name3">Baby Squirrel</h3>
+        <p id="description5">An adorable little squirrel </p>
+        <p id="description6"> that keeps you motivated!</p>
+
+    </div>
+    </div>  
+    
+
+    <!-- JavaScript file inclusion -->
+    <script src="app.js"></script>
+    <script>
+    function chooseSprite(spritePath) {
+    localStorage.setItem('chosenSprite', spritePath);
+    window.location.href = 'dashboard.html'; // Redirect to dashboard
+    }
+    </script>
+
+</body>
+</html>
